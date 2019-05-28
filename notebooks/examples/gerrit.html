@@ -1,0 +1,1759 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0033)http://codereview.xiaoyezi.com/#/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>My Reviews | codereview.xiaoyezi Code Review</title><meta content="locale=en_US" name="gwt:property"><style id="gerrit_sitecss" type="text/css"></style><link href="http://codereview.xiaoyezi.com/favicon.ico" rel="shortcut icon" type="image/x-icon"><link rel="stylesheet" href="./My Reviews _ codereview.xiaoyezi Code Review_files/D0373A752B87FEB5C8DD3B45567F633E.cache.css"><script src="./My Reviews _ codereview.xiaoyezi Code Review_files/91C620E71C38DCE7038DC78D3641DC9B.cache.js.下载"></script><style>.com-google-gwtexpui-clippy-client-ClippyCss-label {
+  vertical-align : top;
+}
+.com-google-gwtexpui-clippy-client-ClippyCss-control {
+  margin-left : 5px;
+  display : inline-block !important;
+  height : 14px;
+  width : 14px;
+  overflow : hidden;
+}
+/* @external gwt-Button; */
+/* @external gwt-DialogBox dialogMiddleCenter; */
+/* @external gwt-TabBar; */
+/* @external gwt-TabBarFirst; */
+/* @external gwt-TabBarItem; */
+/* @external gwt-TabBarItem-selected; */
+/* @external gwt-TabBarRest; */
+/* @external gwt-TabPanel; */
+/* @external gwt-TabPanelBottom; */
+/* CssEval */
+/* CssEval */
+/* CssEval */
+/* CssEval */
+body, .gwt-DialogBox .dialogMiddleCenter {
+  background : #FFFFFF;
+  color : #353535;
+}
+.gwt-Button {
+  white-space : nowrap;
+}
+.gwt-TabBar .gwt-TabBarItem, .gwt-TabBar .gwt-TabBarRest, .gwt-TabPanelBottom {
+  background : transparent;
+}
+.gwt-TabBar {
+  border-bottom : 1px solid black;
+}
+.gwt-TabBar .gwt-TabBarFirst {
+  display : none;
+}
+.gwt-TabBar .gwt-TabBarItem {
+  color : #353535;
+  margin : 0;
+  background : #EEEEEE;
+  padding-top : 0.5em;
+  padding-bottom : 1px;
+  padding-left : 1em;
+  padding-right : 1em;
+  border-bottom : 3px solid transparent;
+  border-right : 0;
+}
+.gwt-TabBar .gwt-TabBarItem-selected {
+  color : #900;
+  background : #D8EDF9;
+  border-bottom-color : #900;
+}
+.gwt-TabBar .gwt-TabBarRest {
+  background : #EEEEEE;
+  padding-top : 0.5em;
+  padding-bottom : 1px;
+}
+.gwt-TabBar .gwt-TabPanelBottom {
+  background : #EEEEEE;
+  border-top : 1px solid black;
+  border-left : none;
+  border-right : none;
+  border-bottom : none;
+  padding : 1px;
+}
+.gwt-TabPanel .gwt-TabPanelBottom {
+  border : none;
+}
+/* @external *; */
+/* CssDef */
+/* CssDef */
+/* CssDef */
+/* CssDef */
+/* CssEval */
+/* CssEval */
+/* CssEval */
+/* CssEval */
+/* CssEval */
+/* CssEval */
+/* CssEval */
+/* CssEval */
+.greenCheckClass {
+  height : 15px;
+  width : 15px;
+  overflow : hidden;
+  background : url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAh0lEQVR42mNgGDJgzu2Z/3uudvwnWWPUoVDSNb7/+e6/5Tbj/9XnysnTCLKVZKeCNGpuUPoPMoRkP3IsYfh/7u0Z/Bq99rig2AAKGJBGggEEMhmkEab43ue7YDbIyUQ5EWQASIPEKsH/IFcQ5VxsfgTh7BNppAXQ3ue74baDnE5WKiJLI6kAAN+fdJsknylQAAAAAElFTkSuQmCC") -0px -0px  no-repeat;
+}
+.gerritTopMenu {
+  font-size : 9pt;
+  padding-left : 5px;
+  padding-right : 5px;
+  background : transparent;
+}
+body, table td, select {
+  font-family : sans-serif;
+}
+.gerritBody {
+  font-size : small;
+  padding-left : 5px;
+  padding-right : 5px;
+}
+a, a:visited {
+  color : #0654ac;
+  text-decoration : none;
+}
+a:hover {
+  color : #0654ac;
+  text-decoration : underline;
+}
+#gerrit_btmmenu {
+  clear : both;
+  color : #a0adcc;
+  text-align : right;
+  padding-right : 10px;
+}
+.version a, .version a:visited, .version a:hover {
+  color : #2a5db0;
+}
+.gwt-Button {
+  color : #000;
+}
+.hyperlink {
+  text-decoration : underline;
+}
+.accountLinkPanel {
+  display : inline;
+}
+.accountLinkPanel img {
+  margin-right : 0.2em;
+  position : relative;
+  top : 2px;
+  height : 16px !important;
+  width : 16px;
+}
+.accountLinkPanel a {
+  position : relative;
+  top : -1px;
+}
+.accountName {
+  white-space : nowrap;
+}
+.inputFieldTypeHint {
+  color : grey;
+}
+.smallHeading {
+  margin-top : 5px;
+  font-weight : bold;
+}
+.blockHeader {
+  font-size : small;
+  font-weight : bold;
+  background : #EEEEEE;
+  padding : 0.2em 0.2em 0.2em 0.5em;
+}
+.link {
+  cursor : pointer;
+}
+.menuScreenMenuBar {
+  background : #FFFFFF;
+  padding-top : 0.5em;
+  padding-bottom : 10em;
+  padding-left : 0.5em;
+  padding-right : 0.5em;
+  border-right : 1px solid #000;
+  margin-right : 0.5em;
+}
+.menuScreenMenuBar .menuItem {
+  white-space : nowrap;
+  display : block;
+  border-right : none;
+  padding : 0.2em;
+}
+.menuScreenMenuBar .menuItem.activeRow, .menuItem.activeRow {
+  background : #D8EDF9;
+}
+.commentPanelBorder {
+  border-top : 1px solid lightgray;
+  border-left : 1px solid lightgray;
+  border-right : 1px solid lightgray;
+  border-top-left-radius : 8px;
+  border-top-right-radius : 8px;
+  border-bottom-left-radius : 0;
+  border-bottom-right-radius : 0;
+  -webkit-border-top-left-radius : 8px;
+  -webkit-border-top-right-radius : 8px;
+  -webkit-border-bottom-left-radius : 0;
+  -webkit-border-bottom-right-radius : 0;
+}
+.commentPanelBorder.commentPanelLast {
+  border-bottom : 1px solid lightgray;
+  border-bottom-left-radius : 8px;
+  border-bottom-right-radius : 8px;
+  -webkit-border-bottom-left-radius : 8px;
+  -webkit-border-bottom-right-radius : 8px;
+}
+.commentPanelHeader {
+  cursor : pointer;
+  width : 100%;
+}
+.commentPanelSummary {
+  color : #777;
+  white-space : nowrap;
+  overflow : hidden;
+}
+.commentPanelAuthorCell {
+  font-weight : bold;
+  white-space : nowrap;
+}
+.commentPanelSummaryCell, .topmenu, .topmenuTDglue {
+  width : 100%;
+}
+.commentPanelDateCell {
+  white-space : nowrap;
+}
+.commentPanelContent {
+  padding-bottom : 1px;
+}
+.commentPanelMessage {
+  font-size : small;
+  padding-left : 0.5em;
+  padding-right : 0.5em;
+}
+.commentPanelMenuBar {
+  float : right;
+}
+.commentPanelMessage p {
+  margin-top : 0;
+  margin-bottom : 0;
+  padding-top : 0.5em;
+  padding-bottom : 0.5em;
+}
+.commentPanelButtons {
+  margin-left : 0.5em;
+}
+.commentPanelButtons .gwt-Button {
+  margin-right : 2em;
+  font-size : 7pt;
+  padding : 1px;
+}
+.commentEditorPanel textarea {
+  margin-left : 0.5em;
+  font-size : small;
+  font-family : sans-serif;
+}
+.linkMenuBar {
+  font-size : 9pt;
+  display : inline;
+  white-space : nowrap;
+  padding-left : 6px;
+}
+.menuItem {
+  padding-left : 5px;
+  padding-right : 5px;
+}
+.linkMenuItemNotLast {
+  border-right : 1px solid #000;
+}
+.topmenuTDmenu {
+  vertical-align : top;
+}
+.topmenuMenuLeft {
+  width : 300px;
+  font-size : 9pt;
+  padding-top : 5px;
+  padding-left : 5px;
+  padding-right : 5px;
+  background : none;
+  position : relative;
+  top : 0;
+}
+.topmenuMenuLeft tbody tr td table {
+  border : 0;
+}
+.topmenuMenuLeft tbody tr td table.gwt-TabBar {
+  border-bottom : 1px solid #ddd;
+}
+.topmenuMenuLeft .gwt-TextBox {
+  width : 250px;
+}
+.topmenuMenuLeft .gwt-Button {
+  padding : 3px 6px;
+}
+.topmenuMenuLeft .gwt-TabBarFirst {
+  display : none;
+}
+.topmenuMenuLeft .gwt-TabBarItem {
+  margin : 0;
+  background : transparent;
+  padding-top : 0;
+  padding-bottom : 1px;
+  padding-left : 1em;
+  padding-right : 1em;
+}
+.topmenuMenuLeft .gwt-TabBarRest {
+  background : transparent;
+  padding-top : 0;
+}
+.topmenuMenuLeft .gwt-TabPanelBottom {
+  background : transparent;
+  border-top : none;
+  border-left : none;
+  border-right : none;
+  border-bottom : none;
+  padding : 1px;
+}
+.topmenuMenuLeft .menuItem {
+  padding-left : 1em;
+  padding-right : 1em;
+  border-right : none;
+}
+.topmenuMenuRight {
+  float : right;
+  text-align : right;
+}
+.menuBarUserName {
+  padding-left : 5px;
+  padding-right : 5px;
+  white-space : nowrap;
+}
+.menuBarUserNameAvatar {
+  vertical-align : middle;
+}
+.menuBarUserNameFocusPanel {
+  display : inline;
+}
+.menuBarUserNamePanel {
+  display : inline;
+  cursor : pointer;
+  font-weight : bold;
+}
+.userInfoPopup {
+  border : 1px solid #000;
+  background : #fff;
+  box-shadow : 3px 3px 5px #888;
+  z-index : 200;
+}
+.searchPanel {
+  white-space : nowrap;
+  display : inline;
+}
+.searchPanel .gwt-TextBox {
+  font-size : 9pt;
+}
+.searchPanel .gwt-Button {
+  font-size : 9pt;
+  margin-left : 2px;
+  padding : 3px 6px;
+}
+.suggestBoxPopup {
+  z-index : 200;
+}
+.rpcStatus {
+  position : fixed;
+  top : 6px;
+  left : 50%;
+  padding-top : 4px;
+  padding-bottom : 4px;
+  padding-left : 10px;
+  padding-right : 10px;
+  text-align : center;
+  font-weight : bold;
+  background : #fff1a8;
+  z-index : 200;
+}
+.errorDialog {
+  background : none;
+  border : none;
+  padding : 10px;
+  width : 600px;
+  color : #FFFFFF;
+  font-size : 15px;
+  font-family : verdana;
+  z-index : 200;
+}
+.errorDialogGlass {
+  opacity : 0.75;
+  z-index : 200;
+  opacity : 0.8;
+}
+.errorDialogTitle {
+  font-size : 30px;
+  font-weight : bold;
+  margin-bottom : 15px;
+}
+.errorDialogErrorType {
+  font-weight : bold;
+  white-space : nowrap;
+  margin-bottom : 15px;
+}
+.errorDialogButtons {
+  width : 100%;
+  margin-top : 15px;
+}
+.errorDialogText {
+  font-size : 15px;
+  font-family : verdana;
+}
+.errorDialog a, .errorDialog a:visited, .errorDialog a:hover {
+  color : #fff;
+  font-weight : bold;
+  font-size : 15px;
+  font-family : verdana;
+}
+.loadingPluginsDialog {
+  background : #fff;
+  color : #000;
+  width : auto;
+}
+.screenHeader {
+  white-space : nowrap;
+  font-size : 16pt;
+  margin : 3px 0 8px;
+  text-overflow : ellipsis;
+  overflow : hidden;
+}
+.screenNoHeader {
+  margin-top : 5px;
+}
+.changeTable {
+  border-collapse : separate;
+  border-spacing : 0;
+}
+.changeTable tr:nth-child(even) {
+  background : transparent;
+}
+.changeTable tr:nth-child(odd) {
+  background : transparent;
+}
+.changeTable .outdated {
+  background : #F08080 !important;
+}
+.changeTable .iconCell {
+  width : 1px;
+  padding : 0;
+  vertical-align : middle;
+  border-bottom : 1px solid #EEEEEE;
+}
+.changeTable .changeTypeCell {
+  width : 1px;
+  padding-left : 5px;
+  padding-right : 5px;
+  border-right : 1px solid #EEEEEE;
+  border-bottom : 1px solid #EEEEEE;
+  vertical-align : top;
+}
+.changeTable .commentCell {
+  text-align : right;
+  font-weight : bold;
+  white-space : nowrap;
+}
+.changeTable .commentCell span.drafts {
+  color : #f55;
+}
+.changeTable .patchCellReverseDiff {
+  color : red;
+}
+.changeTable .patchSizeCell {
+  text-align : right;
+  white-space : nowrap;
+}
+.changeTable td.noborder {
+  border : none;
+}
+.changeTable .filePathCell, .changeTable .diffLinkCell {
+  white-space : nowrap;
+}
+.changeTable .sourceFilePath {
+  font-style : italic;
+  font-size : 9pt;
+}
+.changeTable .leftMostCell {
+  border-left : 1px solid #EEEEEE;
+}
+.changeTable .topMostCell {
+  border-top : 1px solid #EEEEEE;
+}
+.changeTable .dataCell {
+  padding-left : 5px;
+  padding-right : 5px;
+  border-right : 1px solid #EEEEEE;
+  border-bottom : 1px solid #EEEEEE;
+  vertical-align : middle;
+  height : 20px;
+}
+.changeTable a.gwt-InlineHyperlink, .changeTable a.gwt-Anchor {
+  color : #222 !important;
+}
+.changeTable .changeSize {
+  height : 10px;
+  display : inline-block;
+  opacity : 0.6;
+}
+.accountDashboard.changeTable tr {
+  color : #444;
+}
+.accountDashboard.changeTable tr a {
+  color : #444;
+  text-decoration : none;
+}
+.accountDashboard.changeTable .needsReview, .accountDashboard.changeTable .needsReview a {
+  font-weight : bold;
+  color : #353535;
+}
+.changeTable .activeRow, .accountDashboard.changeTable .activeRow, .accountDashboard.changeTable .activeRow a {
+  background : #D8EDF9 !important;
+}
+.changeTable .cSIZE {
+  width : 70px;
+  text-align : right;
+}
+.changeTable .cSUBJECT div {
+  text-overflow : ellipsis;
+  overflow : hidden;
+  white-space : nowrap;
+}
+.changeTable .cOWNER, .changeTable .cSTATUS {
+  white-space : nowrap;
+}
+.changeTable .cLastUpdate {
+  white-space : nowrap;
+  text-align : right;
+  width : 1em;
+}
+.changeTable .groupName, .changeTable .dataCell.singleLine {
+  white-space : nowrap;
+}
+.changeTable .cAPPROVAL {
+  width : 0.5em;
+  text-align : center;
+}
+.changeTable .dataCell.negscore {
+  color : red;
+}
+.changeTable .dataCell.posscore {
+  color : #08a400;
+}
+.changeTable .dataCell.labelNotApplicable {
+  background : #f5f5f5;
+}
+.changeTable .iconHeader {
+  border-top : 1px solid #FFFFFF;
+  border-bottom : 1px solid #FFFFFF;
+  background-color : #EEEEEE;
+}
+.changeTable .dataHeader {
+  border : 1px solid #FFFFFF;
+  padding : 2px 6px 1px;
+  background-color : #EEEEEE;
+  font-style : italic;
+  white-space : nowrap;
+  color : #353535;
+}
+.changeTable .sectionHeader {
+  border-top : 8px solid #FFFFFF;
+  padding : 2px 6px 1px;
+  background-color : #EEEEEE;
+  white-space : nowrap;
+  font-weight : bold;
+  color : #353535;
+}
+.changeTable .emptySection {
+  border-left : 1px solid #EEEEEE;
+  border-right : 1px solid #EEEEEE;
+  border-bottom : 1px solid #EEEEEE;
+  font-style : italic;
+  padding-left : 25px;
+}
+.changeTablePrevNextLinks {
+  float : right;
+  padding-right : 5px;
+}
+.changeTablePrevNextLinks td {
+  width : 5em;
+  text-align : right;
+}
+.changeTablePrevNextLinks .gwt-Hyperlink {
+  font-size : 9pt;
+  color : #2a5db0;
+}
+.patchScreenDisplayControls .gwt-CheckBox {
+  margin-right : 1em;
+}
+.reviewedPanelBottom {
+  float : right;
+  font-size : small;
+}
+.patchContentTable {
+  width : 100%;
+  border-collapse : separate;
+  border-spacing : 0;
+  background : #fff;
+  color : #000;
+}
+.patchContentTable td {
+  padding-top : 0;
+  padding-bottom : 0;
+  font-size : 9pt;
+  font-family : monospace;
+}
+.patchContentTable .iconCell {
+  width : 1px;
+  padding : 0;
+  vertical-align : middle;
+}
+.patchContentTable .diffText {
+  white-space : pre;
+  padding-left : 0.2em;
+  border-left : thin solid #b0bdcc;
+}
+.patchContentTable .diffTextForBinaryInSideBySide {
+  width : 50%;
+}
+.patchContentTable .diffTextFileHeader, .patchContentTable .diffTextNoLF {
+  color : grey;
+  font-weight : bold;
+}
+.patchContentTable .diffTextHunkHeader {
+  color : blue;
+}
+.patchContentTable .diffTextDELETE {
+  color : #a00000;
+}
+.patchContentTable .diffTextCONTEXT {
+  color : grey;
+}
+.patchContentTable .diffTextINSERT {
+  color : #006000;
+}
+.patchContentTable tr.commentHolder {
+  background : #e5ecf9;
+}
+.patchContentTable tr.commentHolder .iconCell {
+  background : #fff;
+}
+.patchContentTable tr.commentHolder .iconCellOfFileCommentRow {
+  background : #EEEEEE;
+}
+.patchContentTable td.commentHolder {
+  padding-left : 0;
+  padding-right : 0;
+  border-top : 1px solid #000;
+  border-right : 1px solid #000;
+}
+.patchContentTable td.commentHolderLeftmost {
+  border-left : 1px solid #000;
+}
+.patchContentTable td.commentHolder.commentPanelLast {
+  border-bottom : 1px solid #000;
+}
+.patchContentTable .commentPanel, .patchContentTable .commentPanel td {
+  font-family : sans-serif;
+}
+.patchContentTable .commentPanelMessage {
+  padding-left : 1px;
+  padding-right : 1px;
+  white-space : normal;
+}
+.patchContentTable .commentPanelButtons, .patchContentTable .commentPanel textarea {
+  margin-left : 1px;
+}
+.lineNumber {
+  padding-left : 0.2em;
+  white-space : pre;
+  width : 1.5em;
+  text-align : center;
+  padding-right : 0.2em;
+  background : #fff;
+  border-bottom : 1px solid #fff;
+}
+.lineNumber.rightmost {
+  border-left : thin solid #b0bdcc;
+}
+.lineNumber.rightBorder {
+  border-right : thin solid #b0bdcc;
+}
+.lineNumber a {
+  color : #888;
+  text-decoration : none;
+}
+.patchContentTable td.fileColumnHeader {
+  background : #EEEEEE;
+  font-family : sans-serif;
+  font-weight : bold;
+  text-align : center;
+}
+.patchContentTable td.fileColumnHeader.unifiedTableHeader {
+  text-align : left;
+}
+.lineNumber.fileColumnHeader {
+  border-bottom : 1px solid #EEEEEE;
+}
+.noLineLineNumber {
+  font-family : monospace;
+  width : 3.5em;
+  padding-left : 0.2em;
+  padding-right : 0.2em;
+  background : #fff;
+  border-bottom : 1px solid #fff;
+}
+.fileLine {
+  padding-left : 0;
+  padding-right : 0;
+  white-space : pre;
+  border-left : thin solid #b0bdcc;
+}
+.fileLineNone {
+  background : #eee;
+  border-bottom : 1px solid #eee;
+}
+.fileLineMode {
+  font-weight : bold;
+}
+.fileLineDELETE, .fileLineDELETE .wdc {
+  background : #fee;
+  border-bottom : 1px solid #fee;
+}
+.fileLineCONTEXT {
+  background : #fff;
+  border-bottom : 1px solid #fff;
+}
+.fileLineINSERT, .fileLineINSERT .wdc {
+  background : #dfd;
+  border-bottom : 1px solid #dfd;
+}
+.patchContentTable .wdd {
+  border-bottom : 1px solid #faa;
+}
+.patchContentTable .wdi {
+  border-bottom : 1px solid #9f9;
+}
+.patchContentTable .skipLine .iconCell, .patchContentTable .skipLine {
+  font-family : sans-serif;
+  text-align : center;
+  font-style : italic;
+  background : #def;
+  color : grey;
+}
+.patchContentTable .skipLine div {
+  display : inline;
+}
+.patchContentTable a.skipLine {
+  color : grey;
+  text-decoration : none;
+}
+.patchContentTable a:hover.skipLine {
+  background : #fff;
+  color : #00a;
+  text-decoration : underline;
+}
+.patchContentTable td.cellsNextToFileComment {
+  background : #EEEEEE;
+  border-top : #EEEEEE;
+  border-bottom : #EEEEEE;
+}
+.patchContentTable .activeRow .iconCell, .patchContentTable .activeRow .lineNumber {
+  background : #D8EDF9;
+  border-bottom : 1px solid blue;
+}
+.patchContentTable .activeRow .fileLine, .patchContentTable .activeRow .diffText, .patchContentTable .activeRow td.commentHolder, .patchContentTable .activeRow .wdc, .patchContentTable .activeRow .wdd, .patchContentTable .activeRow .wdi, .patchContentTable .activeRow .iconCellOfFileCommentRow, .patchContentTable .activeRow td.commentHolder.commentPanelLast {
+  border-bottom : 1px solid blue;
+}
+.patchContentTable .fileCommentBorder .iconCellOfFileCommentRow, .patchContentTable .fileCommentBorder .lineNumber, .patchContentTable .fileCommentBorder .diffText {
+  height : 20px;
+  background : #EEEEEE;
+  border-bottom : 1px solid #EEEEEE;
+}
+.changeScreenStarIcon {
+  margin-right : 5px;
+}
+.changeScreen .gwt-DisclosurePanel .header td {
+  font-weight : bold;
+  white-space : nowrap;
+}
+.changeScreen .gwt-DisclosurePanel .complexHeader, .changeScreen .gwt-DisclosurePanel .complexHeader span {
+  white-space : nowrap;
+}
+.patchSetRevision {
+  padding-left : 20px;
+  font-size : 8pt;
+}
+.patchSetLink {
+  padding-left : 0.5em;
+  font-size : 8pt;
+}
+.changeScreen .gwt-DisclosurePanel .content, .patchSetInfoBlock, .patchSetActions {
+  margin-bottom : 10px;
+}
+.gwt-DisclosurePanel .content {
+  margin-left : 10px;
+}
+.changeScreenDescription, .changeScreenDescription textarea {
+  white-space : pre;
+  font-family : monospace;
+  font-size : 9pt;
+}
+.changeScreenDescription p {
+  margin-top : 0;
+  padding-top : 0.5em;
+}
+.changeComments {
+  padding-top : 1em;
+  width : 60em;
+}
+.infoTable, .infoBlock {
+  border-collapse : collapse;
+  border-spacing : 0;
+}
+.infoTable td {
+  border-left : 1px solid #EEEEEE;
+  border-bottom : 1px solid #EEEEEE;
+  padding : 2px 6px 1px;
+}
+.infoTable td.header {
+  background-color : #EEEEEE;
+  font-weight : normal;
+  padding : 2px 4px 0 6px;
+  font-style : italic;
+  text-align : left;
+  vertical-align : top;
+  white-space : nowrap;
+}
+.rightmost {
+  border-right : 1px solid #EEEEEE;
+}
+.sideBySideTableBinaryHeader {
+  border-left : thin solid #b0bdcc;
+  width : 100%;
+  color : grey;
+  font-weight : bold;
+}
+.infoTable td.approvalrole {
+  width : 5em;
+  border-left : none;
+  font-style : italic;
+  white-space : nowrap;
+}
+.infoTable td.approvalscore {
+  text-align : center;
+}
+.infoTable td.notVotable {
+  background : #f5f5f5;
+}
+.infoTable td.negscore {
+  color : red;
+}
+.infoTable td.posscore {
+  color : #08a400;
+}
+.infoTable td.approvalhint {
+  white-space : nowrap;
+  text-align : left;
+  color : #444;
+}
+.changeInfoBlock {
+  margin-right : 15px;
+}
+.changeInfoTopicPanel img {
+  float : right;
+}
+.changeInfoTopicPanel a {
+  float : left;
+}
+.avatarInfoPanel {
+  margin-right : 10px;
+}
+.avatarInfoPanel td {
+  text-align : center;
+}
+.infoBlock td {
+  padding : 2px 4px 2px 6px;
+  border-right : 1px solid #EEEEEE;
+  border-bottom : 1px solid #EEEEEE;
+  text-align : left;
+  white-space : nowrap;
+}
+.infoBlock td td {
+  padding-left : 0;
+  border-right : 0;
+}
+.infoBlock td.topmost {
+  border-top : 1px solid #EEEEEE;
+}
+.infoBlock td.header {
+  background-color : #EEEEEE;
+  font-style : italic;
+  text-align : right;
+}
+.infoBlock td.noborder {
+  border-right : none;
+}
+.infoBlock td.bottomheader {
+  border-bottom : 1px solid #EEEEEE;
+}
+.infoBlock td.closedstate {
+  font-weight : bold;
+}
+.infoBlock td.useridentity, .patchSetUserIdentity {
+  white-space : nowrap;
+}
+.changeInfoBlock td.changeid {
+  font-size : x-small;
+}
+.patchSetUserIdentity .gwt-InlineLabel {
+  margin-left : 0.2em;
+}
+.patchSetActions .gwt-Button {
+  margin-right : 30px;
+  font-size : 8pt;
+}
+.selectPatchSetOldVersion {
+  font-weight : bold;
+  margin-right : 30px;
+  margin-top : 5px;
+}
+.approvalTable {
+  margin-top : 1em;
+  margin-bottom : 1em;
+}
+.missingApprovalList {
+  margin-top : 5px;
+  margin-left : 1em;
+  padding-left : 1em;
+  margin-bottom : 0;
+}
+.missingApproval {
+  font-size : small;
+  white-space : nowrap;
+}
+.addReviewer {
+  margin-left : 1em;
+  margin-top : 5px;
+  white-space : nowrap;
+}
+.removeReviewer {
+  padding : 0;
+}
+td.removeReviewerCell {
+  padding-left : 4em;
+  border-left : none;
+}
+.downloadBox {
+  min-width : 580px;
+  margin : 5px;
+}
+.downloadBoxTable {
+  border-spacing : 0;
+  width : 100%;
+}
+.downloadBoxTableCommandColumn {
+  text-align : left;
+  font-weight : normal;
+  white-space : nowrap;
+  max-height : 18px;
+  width : 80px;
+  padding-right : 5px;
+}
+.downloadBoxSpacer {
+  margin-left : 5px;
+  margin-right : 5px;
+}
+.downloadBoxScheme, .downloadBoxCopyLabel div {
+  float : right;
+}
+.downloadBoxCopyLabel {
+  font-size : smaller;
+  font-family : monospace;
+}
+.downloadBoxCopyLabel span {
+  width : 500px;
+  white-space : nowrap;
+  display : inline-block;
+  overflow : hidden;
+  text-overflow : ellipsis;
+}
+.downloadBoxCopyLabel .gwt-TextBox {
+  padding : 0;
+  margin : 0;
+  border : 0;
+  max-height : 18px;
+  width : 500px;
+}
+td.downloadLinkListCell {
+  padding : 0;
+}
+.downloadLinkHeader {
+  background : #EEEEEE;
+  white-space : nowrap;
+  border-bottom : 1px solid #000;
+}
+.downloadLinkHeaderGap {
+  margin-left : 5em;
+}
+.downloadLinkList {
+  display : inline;
+  white-space : nowrap;
+}
+.downloadLink {
+  color : #000;
+  text-decoration : none;
+  white-space : nowrap;
+  background : #EEEEEE;
+  border-right : 1px solid #000;
+  padding-left : 0.5em;
+  padding-right : 0.5em;
+}
+a:hover.downloadLink {
+  color : #000;
+}
+.downloadLink_Active {
+  background : #D8EDF9;
+}
+.downloadLinkCopyLabel {
+  white-space : pre;
+  font-family : monospace;
+  font-size : 12px;
+  margin-left : 0.5em;
+  margin-right : 0.5em;
+}
+.downloadLinkCopyLabel .gwt-TextBox {
+  width : 30em;
+}
+.parentsTable {
+  border-style : none;
+  border : 1px 1px 1px 0;
+  outline : 0;
+  padding : 0;
+  border-spacing : 0;
+  text-align : left;
+  font-family : monospace;
+  font-size : 10px;
+}
+.parentsTable td.noborder {
+  border : none;
+}
+.parentsTable td.monospace {
+  font-family : monospace;
+  font-size : 10px;
+  margin : 0;
+  padding-left : 0;
+}
+.unifiedTable, .sideBySideScreenSideBySideTable {
+  width : 100%;
+  border : 1px solid #b0bdcc;
+  display : table;
+}
+.sideBySideScreenSideBySideTable .fileLine {
+  width : 50%;
+}
+.sideBySideScreenLinkTable {
+  width : 100%;
+}
+.sideBySideScreenLinkTable td {
+  width : 33%;
+}
+.patchNoDifference {
+  margin-top : 1em;
+  margin-bottom : 2em;
+  margin-left : 1em;
+  margin-right : 5em;
+  font-weight : bold;
+  font-size : medium;
+  font-family : sans-serif;
+}
+.patchHistoryTable {
+  width : auto;
+  margin-bottom : 10px;
+}
+.patchHistoryTable .dataCell, .usernameField {
+  white-space : nowrap;
+}
+.patchHistoryTablePatchSetHeader {
+  text-align : right;
+}
+.accountUsername, .accountPassword {
+  font-family : monospace;
+  font-size : small;
+}
+.sshKeyPanelEncodedKey {
+  white-space : nowrap;
+  text-overflow : ellipsis;
+  overflow : hidden;
+  font-family : monospace;
+  font-size : small;
+}
+.sshKeyPanelInvalid, .identityUntrustedExternalId {
+  white-space : nowrap;
+  color : red;
+  font-weight : bold;
+}
+.accountInfoBlock {
+  margin-bottom : 10px;
+}
+.accountInfoBlock .gwt-Button {
+  margin-left : 10px;
+}
+.accountContactPrivacyDetails {
+  margin-left : 10px;
+  margin-top : 5px;
+  margin-bottom : 5px;
+  width : 40em;
+}
+.accountContactOnFile {
+  margin-left : 10px;
+  margin-top : 5px;
+  margin-bottom : 5px;
+  font-weight : bold;
+}
+.addWatchPanel {
+  margin-top : 10px;
+  padding : 5px 5px 5px 5px;
+}
+.watchedProjectFilter {
+  margin-left : 1em;
+  color : grey;
+}
+.addBranch, .addSshKeyPanel {
+  margin-top : 10px;
+  background-color : #EEEEEE;
+  padding : 5px 5px 5px 5px;
+}
+.addSshKeyPanel ol {
+  margin-top : 0;
+  margin-bottom : 5px;
+}
+.addSshKeyPanel td {
+  width : 100%;
+}
+.createGroupLink {
+  margin-bottom : 10px;
+}
+.createProjectPanel {
+  margin-bottom : 10px;
+  background-color : #EEEEEE;
+  padding : 5px 5px 5px 5px;
+}
+.sshHostKeyPanel {
+  margin-top : 10px;
+  border : 1px solid #EEEEEE;
+  padding : 5px 5px 5px 5px;
+}
+.sshHostKeyPanelHeading {
+  white-space : nowrap;
+  margin-top : 5px;
+  margin-left : 1em;
+}
+.sshHostKeyPanelFingerprintData {
+  margin-left : 2em;
+  white-space : nowrap;
+  font-family : monospace;
+  font-size : small;
+}
+.sshHostKeyPanelKnownHostEntry {
+  margin-left : 2em;
+  white-space : nowrap;
+  font-family : monospace;
+  font-size : small;
+  width : 80em;
+}
+.contributorAgreementButton {
+  font-weight : bold;
+}
+.contributorAgreementShortDescription {
+  margin-left : 20px;
+  margin-right : 20px;
+  margin-bottom : 10px;
+  padding : 5px 5px 5px 5px;
+  border : 1px solid #b0bdcc;
+}
+.contributorAgreementAlreadySubmitted {
+  margin-left : 20px;
+  margin-right : 20px;
+  padding : 5px 5px 5px 5px;
+  color : red;
+}
+.contributorAgreementLegal {
+  margin-left : 20px;
+  margin-right : 20px;
+  padding : 5px 5px 5px 5px;
+  border : 1px solid #b0bdcc;
+}
+.registerScreenSection {
+  margin-top : 2em;
+}
+.registerScreenExplain {
+  margin-left : 10px;
+  margin-top : 5px;
+  margin-bottom : 5px;
+  width : 45em;
+}
+.registerScreenNextLinks {
+  margin-top : 2em;
+}
+.registerScreenNextLinks .gwt-InlineHyperlink {
+  margin-left : 2em;
+  white-space : nowrap;
+}
+.registerScreenSection .changeTable, .registerScreenSection .sshHostKeyPanel .sshHostKeyPanelKnownHostEntry {
+  width : 45em;
+}
+.registerScreenSection .addSshKeyPanel {
+  background : none;
+}
+.registerScreenSection .sshHostKeyPanel {
+  border : none;
+}
+.projectAdminLabelRangeLine {
+  white-space : nowrap;
+}
+.projectAdminLabelValue {
+  font-family : monospace;
+  font-size : small;
+}
+.projectActions {
+  margin-bottom : 10px;
+}
+.publishCommentsScreen .smallHeading {
+  font-size : small;
+  font-weight : bold;
+  white-space : nowrap;
+}
+.publishCommentsScreen .labelList {
+  margin-bottom : 10px;
+  margin-left : 10px;
+  background : #EEEEEE;
+  width : 25em;
+  white-space : nowrap;
+  padding-top : 2px;
+  padding-bottom : 2px;
+}
+.publishCommentsScreen .coverMessage {
+  margin-left : 10px;
+  padding : 5px 5px 5px 5px;
+}
+.publishCommentsScreen .coverMessage textarea {
+  font-size : small;
+}
+.publishCommentsScreen .labelList .gwt-RadioButton {
+  font-size : smaller;
+}
+.publishCommentsScreen .patchComments {
+  margin-left : 1em;
+  margin-right : 0.5em;
+  margin-bottom : 0.5em;
+}
+.publishCommentsScreen .gwt-Hyperlink {
+  white-space : nowrap;
+  font-size : small;
+}
+.publishCommentsScreen .lineHeader {
+  white-space : nowrap;
+  font-family : monospace;
+  font-size : small;
+  font-style : italic;
+  padding-left : 3px;
+}
+.publishCommentsScreen .commentPanel {
+  border : none;
+  width : 35em;
+}
+.publishCommentsScreen .commentPanelDateCell {
+  display : none;
+}
+.commentedActionDialog .gwt-DisclosurePanel .header td {
+  font-weight : bold;
+  white-space : nowrap;
+}
+.commentedActionDialog .smallHeading {
+  font-size : small;
+  font-weight : bold;
+  white-space : nowrap;
+}
+.commentedActionDialog .commentedActionMessage {
+  margin-left : 10px;
+  background : #EEEEEE;
+  padding : 5px 5px 5px 5px;
+}
+.commentedActionDialog .commentedActionMessage textarea {
+  font-size : small;
+}
+.commentedActionDialog .gwt-Hyperlink {
+  white-space : nowrap;
+  font-size : small;
+}
+.patchBrowserPopup {
+  opacity : 0.9;
+}
+.patchBrowserPopupBody {
+  background : #FFFFFF;
+  margin : 4px;
+  opacity : 0.9;
+}
+.groupUUIDPanel {
+  margin-bottom : 10px;
+}
+.groupDescriptionPanel {
+  margin-bottom : 3px;
+}
+.groupExternalNameFilterTextBox {
+  margin-right : 2px;
+  margin-bottom : 2px;
+}
+.groupNamePanel {
+  margin-bottom : 3px;
+}
+.groupNameTextBox {
+  margin-bottom : 2px;
+}
+.groupOptionsPanel {
+  margin-bottom : 5px;
+}
+.groupOwnerPanel {
+  margin-bottom : 3px;
+}
+.groupOwnerTextBox, .groupTypeSelectListBox, .groupMembersTable, .groupIncludesTable {
+  margin-bottom : 2px;
+}
+.addMemberTextBox {
+  margin-right : 2px;
+  margin-bottom : 2px;
+}
+.specialBranchIconCell {
+  background : #ececec;
+  border-bottom : 1px solid #fff;
+  border-top : 1px solid #fff;
+}
+.specialBranchDataCell {
+  background : #ececec;
+  border : 1px solid #fff;
+  font-style : italic;
+  padding : 2px 6px 1px;
+}
+.editHeadButton {
+  float : right;
+  cursor : pointer;
+}
+.projectFilterPanel {
+  margin-bottom : 10px;
+}
+.projectFilterPanel input {
+  width : 200px;
+}
+.projectFilterLabel {
+  margin-right : 5px;
+}
+.projectNameColumn {
+  min-width : 300px;
+}
+.maxObjectSizeLimitEffectiveLabel, .pluginProjectConfigInheritedValue {
+  padding-top : 5px;
+  padding-left : 5px;
+}
+/* @external popupContent; */
+.com-google-gwtexpui-globalkey-client-KeyCss-helpPopup {
+  background : #000 none repeat scroll 0 50%;
+  color : #fff;
+  font-family : arial, sans-serif;
+  font-weight : bold;
+  overflow : hidden;
+  text-align : left;
+  text-shadow : 1px 1px 7px #000;
+  width : 92%;
+  z-index : 1002;
+  opacity : 0.85;
+  border-radius : 10px;
+  -webkit-border-radius : 10px;
+}
+.com-google-gwtexpui-globalkey-client-KeyCss-helpPopup .popupContent {
+  margin : 10px;
+}
+.com-google-gwtexpui-globalkey-client-KeyCss-helpPopup hr, .com-google-gwtexpui-globalkey-client-KeyCss-helpHeader, .com-google-gwtexpui-globalkey-client-KeyCss-helpHeaderGlue {
+  width : 100%;
+}
+.com-google-gwtexpui-globalkey-client-KeyCss-helpHeader td {
+  white-space : nowrap;
+  color : #fff;
+}
+.com-google-gwtexpui-globalkey-client-KeyCss-helpHeader a, .com-google-gwtexpui-globalkey-client-KeyCss-helpHeader a:visited, .com-google-gwtexpui-globalkey-client-KeyCss-helpHeader a:hover {
+  color : #dd0;
+}
+.com-google-gwtexpui-globalkey-client-KeyCss-helpTable {
+  width : 90%;
+}
+.com-google-gwtexpui-globalkey-client-KeyCss-helpTable td {
+  vertical-align : top;
+  white-space : nowrap;
+}
+.com-google-gwtexpui-globalkey-client-KeyCss-helpTableGlue {
+  width : 25px;
+}
+.com-google-gwtexpui-globalkey-client-KeyCss-helpGroup {
+  color : #dd0;
+  text-align : left;
+}
+.com-google-gwtexpui-globalkey-client-KeyCss-helpKeyStroke {
+  text-align : right;
+}
+.com-google-gwtexpui-globalkey-client-KeyCss-helpSeparator {
+  width : 0.5em;
+  text-align : center;
+  font-weight : bold;
+}
+.com-google-gwtexpui-globalkey-client-KeyCss-helpKey {
+  color : #dd0;
+}
+.com-google-gerrit-client-UserPopupPanel_BinderImpl_GenCss_style-panel {
+  padding : 8px;
+}
+.com-google-gerrit-client-UserPopupPanel_BinderImpl_GenCss_style-avatar {
+  padding-right : 4px;
+  width : 100px;
+  height : 100px;
+}
+.com-google-gerrit-client-UserPopupPanel_BinderImpl_GenCss_style-infoCell {
+  vertical-align : top;
+}
+.com-google-gerrit-client-UserPopupPanel_BinderImpl_GenCss_style-userName {
+  font-weight : bold;
+}
+.com-google-gerrit-client-UserPopupPanel_BinderImpl_GenCss_style-email {
+  padding-bottom : 6px;
+}
+.com-google-gerrit-client-UserPopupPanel_BinderImpl_GenCss_style-userLinks {
+  min-width : 250px;
+}
+.com-google-gerrit-client-UserPopupPanel_BinderImpl_GenCss_style-userLinksRight {
+  float : right;
+}
+.com-google-gerrit-client-UserPopupPanel_BinderImpl_GenCss_style-switchAccount {
+  border-right : 1px solid black;
+  padding-right : 0.5em;
+  margin-right : 0.5em;
+}
+</style><style>/* CssEval */
+/* CssEval */
+/* CssEval */
+.com-google-gerrit-client-changes-CommitMessageBlock_BinderImpl_GenCss_style-commitMessageTable {
+  border-collapse : separate;
+  border-spacing : 0;
+  margin-bottom : 10px;
+}
+.com-google-gerrit-client-changes-CommitMessageBlock_BinderImpl_GenCss_style-header {
+  background-color : #EEEEEE;
+  white-space : nowrap;
+  color : textColor;
+  font-size : 10pt;
+  font-style : italic;
+  padding : 2px 6px 1px;
+}
+.com-google-gerrit-client-changes-CommitMessageBlock_BinderImpl_GenCss_style-contents {
+  border-bottom : 1px solid #EEEEEE;
+  border-left : 1px solid #EEEEEE;
+  border-right : 1px solid #EEEEEE;
+  padding : 5px;
+}
+.com-google-gerrit-client-changes-CommitMessageBlock_BinderImpl_GenCss_style-contents span, .com-google-gerrit-client-changes-CommitMessageBlock_BinderImpl_GenCss_style-commitSummary {
+  font-weight : bold;
+}
+.com-google-gerrit-client-changes-CommitMessageBlock_BinderImpl_GenCss_style-contents pre {
+  margin : 0;
+}
+.com-google-gerrit-client-changes-CommitMessageBlock_BinderImpl_GenCss_style-commitBody p {
+  padding-top : 0;
+}
+.com-google-gerrit-client-changes-CommitMessageBlock_BinderImpl_GenCss_style-starPanel {
+  float : left;
+}
+.com-google-gerrit-client-changes-CommitMessageBlock_BinderImpl_GenCss_style-boxTitle {
+  float : left;
+  margin-right : 10px;
+}
+.com-google-gerrit-client-changes-CommitMessageBlock_BinderImpl_GenCss_style-permalinkPanel {
+  float : right;
+}
+.com-google-gerrit-client-changes-CommitMessageBlock_BinderImpl_GenCss_style-permalinkPanel a {
+  float : left;
+}
+.com-google-gerrit-client-changes-CommitMessageBlock_BinderImpl_GenCss_style-permalinkPanel div {
+  display : inline;
+}
+</style><style>/* CssEval */
+/* CssEval */
+/* CssDef */
+.com-google-gerrit-client-admin-AdminCss-deleteIcon {
+  height : 14px;
+  width : 14px;
+  overflow : hidden;
+  background : url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAa0lEQVR42sVQQQrAIAzzoX5NUUSx9JGO5CAOtqKXLVASmgS0zv0KVR3HnogM7/0An3hE750BsLV7RGuNQfCqt/5aa2UBA719pFLKLEJvlXLOLIBXbZZSSgyCrd0NMUYGwCceEUJ4fZLlfYMLETR+ebp+yZAAAAAASUVORK5CYII=") -0px -0px  no-repeat;
+  border : none;
+}
+.com-google-gerrit-client-admin-AdminCss-deleteIcon:hover {
+  height : 14px;
+  width : 14px;
+  overflow : hidden;
+  background : url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAA+klEQVR42p2SwapHYBDFPdp9EE9kwwsQicgL/HfyDCykSJGiRJRiM/eeuZm+Wxa6i9OZ7zvnN6vRTNP8+tHHMAx6I3TBaBjyPKfrul6pKAqGNcuyaNs2Os+TkiRhf9KdoQuGwWVZKI5j0nWd/TiOP1IzdAWc55n2facoirgAx/vpD10Bp2midV1ZYRhyEa7Od46ugMMw8KZbQRAwAGFWM3QF7PuexnEU+b4vIGY1Q1fAtm15E+R5HgNwdb5zdAWs65q6riPXdbkIx/vpD10Bq6oix3G4AMdWVWqGroBlWVLTNGTbNvuT7gxdBnE+aZrypjfKsuz35P575N+p0mhCGaf3tAAAAABJRU5ErkJggg==") -0px -0px  no-repeat;
+  border : none;
+}
+.com-google-gerrit-client-admin-AdminCss-undoIcon {
+  height : 16px;
+  width : 16px;
+  overflow : hidden;
+  background : url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABm0lEQVR42mNgwAGOLGD4z0AO2D+TQQSkmSwDKioYBEEaf39eS7oByJp/P1H9D3PFvoXCz3fPFz2/e5HUkpISBm6Cmr89NPz/67HC/19viv//ep3///uLPCDO+bFnociVg4tFrtaXccqgaG5oYOCCa36g///7I6P/H29r/v8KZIPox2fF/r+5afb/2/PM/4/POf47uFj4SX0VqxFKaMM0/wBq/g7FMANeXJKFY5BBD886/N+7SPQUyGJU57+tBBvw5b7O/2sHWOAY2YD7J7j/f36a9f/oaukfexaInsYMg7dl/28dZgHTP19louDvd1mBBnD9v3GI/f/rO/n/9y+W/oI9IIGaQRgWC3C8kvH/u4d5/++f5P//6Unm/wOLpX7gjg2oATDxo/MZDHbOZAg4vIDh5Ndnuf/fPyr7f3CxJO50gislHpnLIHViDdP/T887/h1aJIg/oeFKiadX8f17eSv234Flyu9JTuqH5zIo3T7i/OfGUed/B5cr1ZNuwHyG2Fe30zYdXCa0jqycemipRObRFdKZ++czSMDEAPQfTsofDEvSAAAAAElFTkSuQmCC") -0px -0px  no-repeat;
+  border : none;
+}
+.com-google-gerrit-client-admin-AdminCss-deleted {
+  background-color : #a9a9a9;
+  color : #fff;
+  white-space : nowrap;
+  padding-left : 50px;
+}
+.com-google-gerrit-client-admin-AdminCss-deleted:hover {
+  background-color : #D8EDF9;
+  color : #353535;
+}
+.com-google-gerrit-client-admin-AdminCss-deletedBorder {
+  background : 1px solid #a9a9a9;
+}
+.com-google-gerrit-client-admin-AdminCss-deleteSectionHover {
+  background-color : #D8EDF9 !important;
+}
+.com-google-gwtexpui-safehtml-client-SafeHtmlCss-wikiPreFormat {
+  white-space : pre;
+  font-family : "Lucida Console", "Lucida Sans Typewriter", Monaco, monospace;
+  font-size : small;
+}
+.com-google-gwtexpui-safehtml-client-SafeHtmlCss-wikiQuote {
+  margin-left : 0;
+  border-left : 1px solid #888;
+  padding-left : 5px;
+}
+</style><style>/* @external *; */
+.pln {
+  color : #000;
+}
+@media screen {
+  .str {
+    color : #080;
+  }
+  .kwd {
+    color : #008;
+  }
+  .com {
+    color : #800;
+  }
+  .typ {
+    color : #606;
+  }
+  .lit {
+    color : #066;
+  }
+  .pun, .opn, .clo {
+    color : #660;
+  }
+  .tag {
+    color : #008;
+  }
+  .atn {
+    color : #606;
+  }
+  .atv {
+    color : #080;
+  }
+  .dec, .var {
+    color : #606;
+  }
+  .fun {
+    color : red;
+  }
+}
+@media print, projection {
+  .str {
+    color : #060;
+  }
+  .kwd {
+    color : #006;
+    font-weight : bold;
+  }
+  .com {
+    color : #600;
+    font-style : italic;
+  }
+  .typ {
+    color : #404;
+    font-weight : bold;
+  }
+  .lit {
+    color : #044;
+  }
+  .pun, .opn, .clo {
+    color : #440;
+  }
+  .tag {
+    color : #006;
+    font-weight : bold;
+  }
+  .atn {
+    color : #404;
+  }
+  .atv {
+    color : #060;
+  }
+}
+pre.prettyprint {
+  padding : 2px;
+  border : 1px solid #888;
+}
+ol.linenums {
+  margin-top : 0;
+  margin-bottom : 0;
+}
+li.L0 {
+  list-style-type : none;
+}
+li.L1 {
+  list-style-type : none;
+  background : #eee;
+}
+li.L2 {
+  list-style-type : none;
+}
+li.L3, li.L5 {
+  list-style-type : none;
+  background : #eee;
+}
+li.L6 {
+  list-style-type : none;
+}
+li.L7 {
+  list-style-type : none;
+  background : #eee;
+}
+li.L8 {
+  list-style-type : none;
+}
+li.L9 {
+  background : #eee;
+}
+/* @external wse; */
+/* @external lecr; */
+/* @external vt; */
+/* @external wdd; */
+/* @external wdi; */
+/* @external str; */
+/* @external kwd; */
+/* @external com; */
+/* @external typ; */
+/* @external lit; */
+/* @external pun; */
+/* @external pln; */
+/* @external tag; */
+/* @external atn; */
+/* @external atv; */
+/* @external dec; */
+.wse {
+  background : red;
+  cursor : pointer;
+}
+.lecr {
+  border-bottom : #aaa 1px dashed;
+  border-left : #aaa 1px dashed;
+  padding-bottom : 0;
+  margin : 0 2px;
+  padding-left : 2px;
+  padding-right : 2px;
+  border-top : #aaa 1px dashed;
+  border-right : #aaa 1px dashed;
+  padding-top : 0;
+  cursor : pointer;
+}
+.vt, .vt .str, .vt .kwd, .vt .com, .vt .typ, .vt .lit, .vt .pun, .vt .pln, .vt .tag, .vt .atn, .vt .atv, .vt .dec {
+  color : red;
+}
+.wdd {
+  background : #faa;
+}
+.wdi {
+  background : #9f9;
+}
+.wse .vt, .wdd .vt, .wse .vt .pun, .wdd .vt .pun, .wse .vt .str, .wdd .vt .str, .wse .vt .kwd, .wdd .vt .kwd, .wse .vt .com, .wdd .vt .com, .wse .vt .typ, .wdd .vt .typ, .wse .vt .lit, .wdd .vt .lit, .wse .vt .pun, .wdd .vt .pun, .wse .vt .pln, .wdd .vt .pln, .wse .vt .tag, .wdd .vt .tag, .wse .vt .atn, .wdd .vt .atn, .wse .vt .atv, .wdd .vt .atv, .wse .vt .dec, .wdd .vt .dec {
+  color : black;
+}
+.wse .wdd, .wse .wdi {
+  background : red;
+}
+/* @external gwt-TextBox; */
+/* @external gwt-ListBox; */
+/* CssDef */
+.com-google-gerrit-client-patches-PatchScriptSettingsPanel_MyUiBinderImpl_GenCss_style-controls {
+  border : none;
+  border-collapse : separate;
+  border-spacing : 0;
+}
+.com-google-gerrit-client-patches-PatchScriptSettingsPanel_MyUiBinderImpl_GenCss_style-controls td {
+  font-size : 8pt;
+  padding : 0;
+  white-space : nowrap;
+}
+.com-google-gerrit-client-patches-PatchScriptSettingsPanel_MyUiBinderImpl_GenCss_style-controls .gwt-TextBox {
+  font-size : 8pt;
+  padding : 0;
+  text-align : right;
+}
+.com-google-gerrit-client-patches-PatchScriptSettingsPanel_MyUiBinderImpl_GenCss_style-controls .gwt-ListBox {
+  font-size : 8pt;
+  padding : 0;
+  margin-right : 1em;
+}
+.com-google-gerrit-client-patches-PatchScriptSettingsPanel_MyUiBinderImpl_GenCss_style-updateButton {
+  margin-left : 1em;
+  margin-right : 1em;
+  font-size : 8pt;
+}
+</style><style>/* CssEval */
+/* CssEval */
+.com-google-gerrit-client-patches-PatchSetSelectBox_BinderImpl_GenCss_style-linkPanel {
+  font-size : 12px;
+  white-space : normal;
+}
+.com-google-gerrit-client-patches-PatchSetSelectBox_BinderImpl_GenCss_style-linkPanel>div {
+  padding-left : 3px;
+  padding-right : 3px;
+  vertical-align : middle;
+  display : inline-block;
+}
+.com-google-gerrit-client-patches-PatchSetSelectBox_BinderImpl_GenCss_style-patchSetLabel {
+  font-weight : bold;
+}
+.com-google-gerrit-client-patches-PatchSetSelectBox_BinderImpl_GenCss_style-sideMarker {
+  font-family : monospace;
+}
+.com-google-gerrit-client-patches-PatchSetSelectBox_BinderImpl_GenCss_style-linkPanel>a {
+  padding-left : 3px;
+  padding-right : 3px;
+  text-decoration : none;
+  vertical-align : middle;
+  display : inline-block;
+}
+.com-google-gerrit-client-patches-PatchSetSelectBox_BinderImpl_GenCss_style-selected {
+  font-weight : bold;
+  background-color : #D8EDF9;
+}
+.com-google-gerrit-client-patches-PatchSetSelectBox_BinderImpl_GenCss_style-hidden {
+  visibility : hidden;
+}
+</style></head><body><div id="gerrit_topmenu" class="gerritTopMenu"><table class="topmenu"><colgroup><col><col><col></colgroup><tbody><tr><td class="topmenuTDmenu"><table cellspacing="0" cellpadding="0" class="topmenuMenuLeft"><tbody><tr><td align="left" style="vertical-align: top;"><table cellspacing="0" cellpadding="0" class="gwt-TabBar" role="tablist" style="width: 100%;"><tbody><tr><td align="left" height="100%" class="gwt-TabBarFirst-wrapper" style="vertical-align: bottom;"><div class="gwt-TabBarFirst" style="white-space: normal; height: 100%;">&nbsp;</div></td><td align="left" class="gwt-TabBarItem-wrapper" style="vertical-align: bottom;"><div tabindex="0" class="gwt-TabBarItem" role="tab"><input type="text" tabindex="-1" role="presentation" style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><div class="gwt-Label" style="white-space: nowrap;">All</div></div></td><td align="left" class="gwt-TabBarItem-wrapper gwt-TabBarItem-wrapper-selected" style="vertical-align: bottom;"><div tabindex="0" class="gwt-TabBarItem gwt-TabBarItem-selected" role="tab"><input type="text" tabindex="-1" role="presentation" style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><div class="gwt-Label" style="white-space: nowrap;">My</div></div></td><td align="left" class="gwt-TabBarItem-wrapper" style="vertical-align: bottom;"><div tabindex="0" class="gwt-TabBarItem" role="tab"><input type="text" tabindex="-1" role="presentation" style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><div class="gwt-Label" style="white-space: nowrap;">Projects</div></div></td><td align="left" class="gwt-TabBarItem-wrapper" style="vertical-align: bottom;"><div tabindex="0" class="gwt-TabBarItem" role="tab"><input type="text" tabindex="-1" role="presentation" style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><div class="gwt-Label" style="white-space: nowrap;">People</div></div></td><td align="left" class="gwt-TabBarItem-wrapper" style="vertical-align: bottom;"><div tabindex="0" class="gwt-TabBarItem" role="tab"><input type="text" tabindex="-1" role="presentation" style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><div class="gwt-Label" style="white-space: nowrap;">Plugins</div></div></td><td align="left" class="gwt-TabBarItem-wrapper" style="vertical-align: bottom;"><div tabindex="0" class="gwt-TabBarItem" role="tab"><input type="text" tabindex="-1" role="presentation" style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><div class="gwt-Label" style="white-space: nowrap;">Documentation</div></div></td><td align="left" width="100%" class="gwt-TabBarRest-wrapper" style="vertical-align: bottom;"><div class="gwt-TabBarRest" style="white-space: normal; height: 100%;">&nbsp;</div></td></tr></tbody></table></td></tr><tr><td align="left" height="100%" style="vertical-align: top;"><div class="gwt-TabPanelBottom" role="tabpanel"><div style="width: 100%; height: 100%; padding: 0px; margin: 0px; display: none;" aria-hidden="true"><div class="linkMenuBar" role="menubar" style="width: 100%; height: 100%; display: none;" aria-hidden="true"><a class="menuItem linkMenuItemNotLast" href="http://codereview.xiaoyezi.com/#/q/status:open" role="menuitem">Open</a><a class="menuItem linkMenuItemNotLast" href="http://codereview.xiaoyezi.com/#/q/status:merged" role="menuitem">Merged</a><a class="menuItem" href="http://codereview.xiaoyezi.com/#/q/status:abandoned" role="menuitem">Abandoned</a></div></div><div style="width: 100%; height: 100%; padding: 0px; margin: 0px;"><div class="linkMenuBar" role="menubar" style="width: 100%; height: 100%;"><a class="menuItem linkMenuItemNotLast activeRow" href="http://codereview.xiaoyezi.com/#/" role="menuitem">Changes</a><a class="menuItem linkMenuItemNotLast" href="http://codereview.xiaoyezi.com/#/q/is:draft" role="menuitem">Drafts</a><a class="menuItem linkMenuItemNotLast" href="http://codereview.xiaoyezi.com/#/q/has:draft" role="menuitem">Draft Comments</a><a class="menuItem linkMenuItemNotLast" href="http://codereview.xiaoyezi.com/#/q/is:watched+status:open" role="menuitem">Watched Changes</a><a class="menuItem" href="http://codereview.xiaoyezi.com/#/q/is:starred" role="menuitem">Starred Changes</a></div></div><div aria-hidden="true" style="width: 100%; height: 100%; padding: 0px; margin: 0px; display: none;"><div class="linkMenuBar" role="menubar" aria-hidden="true" style="width: 100%; height: 100%; display: none;"><a class="menuItem linkMenuItemNotLast" href="http://codereview.xiaoyezi.com/#/admin/projects/" role="menuitem">List</a><a class="menuItem linkMenuItemNotLast" href="http://codereview.xiaoyezi.com/#" role="menuitem" aria-hidden="true" style="display: none;">General</a><a class="menuItem linkMenuItemNotLast" href="http://codereview.xiaoyezi.com/#" role="menuitem" aria-hidden="true" style="display: none;">Branches</a><a class="menuItem linkMenuItemNotLast" href="http://codereview.xiaoyezi.com/#" role="menuitem" aria-hidden="true" style="display: none;">Access</a><a class="menuItem linkMenuItemNotLast" href="http://codereview.xiaoyezi.com/#" role="menuitem" aria-hidden="true" style="display: none;">Dashboards</a><a class="menuItem" href="http://codereview.xiaoyezi.com/#/admin/create-project/" role="menuitem">Create New Project</a></div></div><div aria-hidden="true" style="width: 100%; height: 100%; padding: 0px; margin: 0px; display: none;"><div class="linkMenuBar" role="menubar" aria-hidden="true" style="width: 100%; height: 100%; display: none;"><a class="menuItem linkMenuItemNotLast" href="http://codereview.xiaoyezi.com/#/admin/groups/" role="menuitem">List Groups</a><a class="menuItem" href="http://codereview.xiaoyezi.com/#/admin/create-group/" role="menuitem">Create New Group</a></div></div><div aria-hidden="true" style="width: 100%; height: 100%; padding: 0px; margin: 0px; display: none;"><div class="linkMenuBar" role="menubar" aria-hidden="true" style="width: 100%; height: 100%; display: none;"><a class="menuItem" href="http://codereview.xiaoyezi.com/#/admin/plugins/" role="menuitem">Installed</a></div></div><div aria-hidden="true" style="width: 100%; height: 100%; padding: 0px; margin: 0px; display: none;"><div class="linkMenuBar" role="menubar" aria-hidden="true" style="width: 100%; height: 100%; display: none;"><a class="menuItem linkMenuItemNotLast" href="http://codereview.xiaoyezi.com/Documentation/index.html" role="menuitem" target="_blank">Table of Contents</a><a class="menuItem linkMenuItemNotLast" href="http://codereview.xiaoyezi.com/Documentation/user-search.html" role="menuitem" target="_blank">Searching</a><a class="menuItem linkMenuItemNotLast" href="http://codereview.xiaoyezi.com/Documentation/user-upload.html" role="menuitem" target="_blank">Uploading</a><a class="menuItem linkMenuItemNotLast" href="http://codereview.xiaoyezi.com/Documentation/access-control.html" role="menuitem" target="_blank">Access Controls</a><a class="menuItem linkMenuItemNotLast" href="http://codereview.xiaoyezi.com/Documentation/rest-api.html" role="menuitem" target="_blank">REST API</a><a class="menuItem" href="http://codereview.xiaoyezi.com/Documentation/intro-project-owner.html" role="menuitem" target="_blank">Project Owner Guide</a></div></div></div></td></tr></tbody></table></td><td class="topmenuTDglue"><div></div></td><td class="topmenuTDmenu"><div class="topmenuMenuRight"><div class="searchPanel"><input type="text" class="gwt-TextBox inputFieldTypeHint" size="70"><button type="button" class="gwt-Button">Search</button></div><div class="linkMenuBar" role="menubar"><div tabindex="0" class="menuBarUserNameFocusPanel"><input type="text" tabindex="-1" role="presentation" style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;"><div class="menuBarUserNamePanel"><span class="menuBarUserName">tanxinwen</span><img class="menuBarUserNameAvatar" aria-hidden="true" src="./My Reviews _ codereview.xiaoyezi Code Review_files/avatar" style="height: 26px; display: none;"><span class="gwt-InlineLabel"> ▾</span></div></div></div></div></td></tr></tbody></table></div><div id="gerrit_header"></div><div id="gerrit_body" class="gerritBody"><div><div style=""><div class="screen"><table class="screenHeader"><colgroup><col><col><col><col></colgroup><tbody><tr><td>&nbsp;</td><td><div class="screenHeader"><span class="gwt-InlineLabel">My Reviews</span></div></td><td>&nbsp;</td><td align="right" width="100%">&nbsp;</td></tr></tbody></table><div><table class="changeTable accountDashboard" style="width: 100%;"><colgroup><col></colgroup><tbody><tr><td class="iconHeader"></td><td class="iconHeader"></td><td class="dataHeader">Subject</td><td class="dataHeader">Status</td><td class="dataHeader">Owner</td><td class="dataHeader">Project</td><td class="dataHeader">Branch</td><td class="dataHeader">Updated</td><td class="dataHeader">Size</td><td title="Code-Review" class="dataHeader">CR</td></tr><tr><td colspan="10" class="sectionHeader">Outgoing reviews</td></tr><tr><td colspan="10" class="emptySection">(None)</td></tr><tr><td colspan="10" class="sectionHeader">Incoming reviews</td></tr><tr><td colspan="10" class="emptySection">(None)</td></tr><tr><td colspan="10" class="sectionHeader">Recently closed</td></tr><tr class="activeRow"><td class="iconCell leftMostCell"><img src="data:image/gif;base64,R0lGODlhDAAJAKIEAP39/fX19fn5+QAAAAAAAAAAAAAAAAAAACH5BAEAAAQALAAAAAAMAAkAAAMTSEq37qc9GOeK1eL8tmXcFIpWAgA7" width="12" height="9" class="gwt-Image"></td><td class="iconCell"><img src="data:image/gif;base64,R0lGODlhDwAPALMPAP///8zj++r7/7vb/rHW/tPt/9Lk+qzT/rbY/sHh/8Te/N7q+Nzy/7nY/djn+f///yH5BAEAAA8ALAAAAAAPAA8AAARg8MkZjpo4k0KyNwlQBB42MICAfEF7APDRBsYzIEkewGKeDI1DgUckMg6GTdFIqC0QgyUgQVhgGkOi4OBBCJYdzILAywIGNcoOgCAQvowBRpE4kgzCQgPjQCAcEwsNTRIRADs=" width="15" height="15" class="gwt-Image"></td><td class="dataCell cSUBJECT"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/24628">MC-704: [fix] get play button by name</a></td><td class="dataCell cSTATUS">Merged</td><td class="dataCell cOWNER"><div class="accountLinkPanel"><img class="gwt-Image" aria-hidden="true" style="display: none;"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/q/owner:gaozeting+status:merged" title="gaozeting">gaozeting</a></div></td><td class="dataCell"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/projects/music_center,dashboards/default">music_center</a></td><td class="dataCell"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/q/status:merged+project:music_center+branch:master">master</a></td><td class="dataCell cLastUpdate">10:52 AM</td><td class="dataCell cSIZE" title="+4, -4"><div class="changeSize" style="width: 2px; background-color: rgb(5, 255, 0);"></div></td><td class="dataCell cAPPROVAL singleLine" title="Code-Review 
+by tanxinwen"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAh0lEQVR42mNgGDJgzu2Z/3uudvwnWWPUoVDSNb7/+e6/5Tbj/9XnysnTCLKVZKeCNGpuUPoPMoRkP3IsYfh/7u0Z/Bq99rig2AAKGJBGggEEMhmkEab43ue7YDbIyUQ5EWQASIPEKsH/IFcQ5VxsfgTh7BNppAXQ3ue74baDnE5WKiJLI6kAAN+fdJsknylQAAAAAElFTkSuQmCC" width="15" height="15" class="gwt-Image"></td></tr><tr><td class="iconCell leftMostCell"></td><td class="iconCell"><img src="data:image/gif;base64,R0lGODlhDwAPALMPAP///8zj++r7/7vb/rHW/tPt/9Lk+qzT/rbY/sHh/8Te/N7q+Nzy/7nY/djn+f///yH5BAEAAA8ALAAAAAAPAA8AAARg8MkZjpo4k0KyNwlQBB42MICAfEF7APDRBsYzIEkewGKeDI1DgUckMg6GTdFIqC0QgyUgQVhgGkOi4OBBCJYdzILAywIGNcoOgCAQvowBRpE4kgzCQgPjQCAcEwsNTRIRADs=" width="15" height="15" class="gwt-Image"></td><td class="dataCell cSUBJECT"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/24615">MC-666: [fix] update font color</a></td><td class="dataCell cSTATUS">Merged</td><td class="dataCell cOWNER"><div class="accountLinkPanel"><img class="gwt-Image" aria-hidden="true" style="display: none;"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/q/owner:gaozeting+status:merged" title="gaozeting">gaozeting</a></div></td><td class="dataCell"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/projects/music_center,dashboards/default">music_center</a></td><td class="dataCell"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/q/status:merged+project:music_center+branch:master">master</a></td><td class="dataCell cLastUpdate">May 24</td><td class="dataCell cSIZE" title="+1, -1"><div class="changeSize" style="width: 2px; background-color: rgb(0, 255, 0);"></div></td><td class="dataCell cAPPROVAL singleLine" title="Code-Review 
+by tanxinwen"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAh0lEQVR42mNgGDJgzu2Z/3uudvwnWWPUoVDSNb7/+e6/5Tbj/9XnysnTCLKVZKeCNGpuUPoPMoRkP3IsYfh/7u0Z/Bq99rig2AAKGJBGggEEMhmkEab43ue7YDbIyUQ5EWQASIPEKsH/IFcQ5VxsfgTh7BNppAXQ3ue74baDnE5WKiJLI6kAAN+fdJsknylQAAAAAElFTkSuQmCC" width="15" height="15" class="gwt-Image"></td></tr><tr><td class="iconCell leftMostCell"></td><td class="iconCell"><img src="data:image/gif;base64,R0lGODlhDwAPALMPAP///8zj++r7/7vb/rHW/tPt/9Lk+qzT/rbY/sHh/8Te/N7q+Nzy/7nY/djn+f///yH5BAEAAA8ALAAAAAAPAA8AAARg8MkZjpo4k0KyNwlQBB42MICAfEF7APDRBsYzIEkewGKeDI1DgUckMg6GTdFIqC0QgyUgQVhgGkOi4OBBCJYdzILAywIGNcoOgCAQvowBRpE4kgzCQgPjQCAcEwsNTRIRADs=" width="15" height="15" class="gwt-Image"></td><td class="dataCell cSUBJECT"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/24592">MC-670: [fix] close rank view by visible false</a></td><td class="dataCell cSTATUS">Merged</td><td class="dataCell cOWNER"><div class="accountLinkPanel"><img class="gwt-Image" aria-hidden="true" style="display: none;"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/q/owner:gaozeting+status:merged" title="gaozeting">gaozeting</a></div></td><td class="dataCell"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/projects/music_center,dashboards/default">music_center</a></td><td class="dataCell"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/q/status:merged+project:music_center+branch:master">master</a></td><td class="dataCell cLastUpdate">May 22</td><td class="dataCell cSIZE" title="+1, -1"><div class="changeSize" style="width: 2px; background-color: rgb(0, 255, 0);"></div></td><td class="dataCell cAPPROVAL singleLine" title="Code-Review 
+by tanxinwen"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAh0lEQVR42mNgGDJgzu2Z/3uudvwnWWPUoVDSNb7/+e6/5Tbj/9XnysnTCLKVZKeCNGpuUPoPMoRkP3IsYfh/7u0Z/Bq99rig2AAKGJBGggEEMhmkEab43ue7YDbIyUQ5EWQASIPEKsH/IFcQ5VxsfgTh7BNppAXQ3ue74baDnE5WKiJLI6kAAN+fdJsknylQAAAAAElFTkSuQmCC" width="15" height="15" class="gwt-Image"></td></tr><tr><td class="iconCell leftMostCell"></td><td class="iconCell"><img src="data:image/gif;base64,R0lGODlhDwAPALMPAP///8zj++r7/7vb/rHW/tPt/9Lk+qzT/rbY/sHh/8Te/N7q+Nzy/7nY/djn+f///yH5BAEAAA8ALAAAAAAPAA8AAARg8MkZjpo4k0KyNwlQBB42MICAfEF7APDRBsYzIEkewGKeDI1DgUckMg6GTdFIqC0QgyUgQVhgGkOi4OBBCJYdzILAywIGNcoOgCAQvowBRpE4kgzCQgPjQCAcEwsNTRIRADs=" width="15" height="15" class="gwt-Image"></td><td class="dataCell cSUBJECT"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/24591">MC-670: [fix] show rank when click next in last substep</a></td><td class="dataCell cSTATUS">Merged</td><td class="dataCell cOWNER"><div class="accountLinkPanel"><img class="gwt-Image" aria-hidden="true" style="display: none;"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/q/owner:gaozeting+status:merged" title="gaozeting">gaozeting</a></div></td><td class="dataCell"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/projects/music_center,dashboards/default">music_center</a></td><td class="dataCell"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/q/status:merged+project:music_center+branch:master">master</a></td><td class="dataCell cLastUpdate">May 22</td><td class="dataCell cSIZE" title="+23, -24"><div class="changeSize" style="width: 6px; background-color: rgb(46, 255, 0);"></div></td><td class="dataCell cAPPROVAL singleLine" title="Code-Review 
+by tanxinwen"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAh0lEQVR42mNgGDJgzu2Z/3uudvwnWWPUoVDSNb7/+e6/5Tbj/9XnysnTCLKVZKeCNGpuUPoPMoRkP3IsYfh/7u0Z/Bq99rig2AAKGJBGggEEMhmkEab43ue7YDbIyUQ5EWQASIPEKsH/IFcQ5VxsfgTh7BNppAXQ3ue74baDnE5WKiJLI6kAAN+fdJsknylQAAAAAElFTkSuQmCC" width="15" height="15" class="gwt-Image"></td></tr><tr><td class="iconCell leftMostCell"></td><td class="iconCell"><img src="data:image/gif;base64,R0lGODlhDwAPALMPAP///8zj++r7/7vb/rHW/tPt/9Lk+qzT/rbY/sHh/8Te/N7q+Nzy/7nY/djn+f///yH5BAEAAA8ALAAAAAAPAA8AAARg8MkZjpo4k0KyNwlQBB42MICAfEF7APDRBsYzIEkewGKeDI1DgUckMg6GTdFIqC0QgyUgQVhgGkOi4OBBCJYdzILAywIGNcoOgCAQvowBRpE4kgzCQgPjQCAcEwsNTRIRADs=" width="15" height="15" class="gwt-Image"></td><td class="dataCell cSUBJECT"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/24583">MC-665: [fix] use callback replace opcode.</a></td><td class="dataCell cSTATUS">Merged</td><td class="dataCell cOWNER"><div class="accountLinkPanel"><img class="gwt-Image" aria-hidden="true" style="display: none;"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/q/owner:tanxinwen+status:merged" title="tanxinwen">tanxinwen</a></div></td><td class="dataCell"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/projects/music_center,dashboards/default">music_center</a></td><td class="dataCell"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/q/status:merged+project:music_center+branch:master">master</a></td><td class="dataCell cLastUpdate">May 21</td><td class="dataCell cSIZE" title="+34, -46"><div class="changeSize" style="width: 11px; background-color: rgb(82, 255, 0);"></div></td><td class="dataCell cAPPROVAL singleLine" title="Code-Review 
+by tanxinwen"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAh0lEQVR42mNgGDJgzu2Z/3uudvwnWWPUoVDSNb7/+e6/5Tbj/9XnysnTCLKVZKeCNGpuUPoPMoRkP3IsYfh/7u0Z/Bq99rig2AAKGJBGggEEMhmkEab43ue7YDbIyUQ5EWQASIPEKsH/IFcQ5VxsfgTh7BNppAXQ3ue74baDnE5WKiJLI6kAAN+fdJsknylQAAAAAElFTkSuQmCC" width="15" height="15" class="gwt-Image"></td></tr><tr><td class="iconCell leftMostCell"></td><td class="iconCell"><img src="data:image/gif;base64,R0lGODlhDwAPALMPAP///8zj++r7/7vb/rHW/tPt/9Lk+qzT/rbY/sHh/8Te/N7q+Nzy/7nY/djn+f///yH5BAEAAA8ALAAAAAAPAA8AAARg8MkZjpo4k0KyNwlQBB42MICAfEF7APDRBsYzIEkewGKeDI1DgUckMg6GTdFIqC0QgyUgQVhgGkOi4OBBCJYdzILAywIGNcoOgCAQvowBRpE4kgzCQgPjQCAcEwsNTRIRADs=" width="15" height="15" class="gwt-Image"></td><td class="dataCell cSUBJECT"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/24578">KG-160: [fix] fix code error.</a></td><td class="dataCell cSTATUS">Merged</td><td class="dataCell cOWNER"><div class="accountLinkPanel"><img class="gwt-Image" aria-hidden="true" style="display: none;"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/q/owner:tanxinwen+status:merged" title="tanxinwen">tanxinwen</a></div></td><td class="dataCell"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/projects/classroom,dashboards/default">classroom</a></td><td class="dataCell"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/q/status:merged+project:classroom+branch:kindergarten">kindergarten</a></td><td class="dataCell cLastUpdate">May 21</td><td class="dataCell cSIZE" title="+1, -1"><div class="changeSize" style="width: 2px; background-color: rgb(0, 255, 0);"></div></td><td class="dataCell cAPPROVAL singleLine" title="Code-Review 
+by tanxinwen"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAh0lEQVR42mNgGDJgzu2Z/3uudvwnWWPUoVDSNb7/+e6/5Tbj/9XnysnTCLKVZKeCNGpuUPoPMoRkP3IsYfh/7u0Z/Bq99rig2AAKGJBGggEEMhmkEab43ue7YDbIyUQ5EWQASIPEKsH/IFcQ5VxsfgTh7BNppAXQ3ue74baDnE5WKiJLI6kAAN+fdJsknylQAAAAAElFTkSuQmCC" width="15" height="15" class="gwt-Image"></td></tr><tr><td class="iconCell leftMostCell"></td><td class="iconCell"><img src="data:image/gif;base64,R0lGODlhDwAPALMPAP///8zj++r7/7vb/rHW/tPt/9Lk+qzT/rbY/sHh/8Te/N7q+Nzy/7nY/djn+f///yH5BAEAAA8ALAAAAAAPAA8AAARg8MkZjpo4k0KyNwlQBB42MICAfEF7APDRBsYzIEkewGKeDI1DgUckMg6GTdFIqC0QgyUgQVhgGkOi4OBBCJYdzILAywIGNcoOgCAQvowBRpE4kgzCQgPjQCAcEwsNTRIRADs=" width="15" height="15" class="gwt-Image"></td><td class="dataCell cSUBJECT"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/24571">KG-160: [feature] delete map button in SelectSceneBase.</a></td><td class="dataCell cSTATUS">Merged</td><td class="dataCell cOWNER"><div class="accountLinkPanel"><img class="gwt-Image" aria-hidden="true" style="display: none;"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/q/owner:tanxinwen+status:merged" title="tanxinwen">tanxinwen</a></div></td><td class="dataCell"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/projects/classroom,dashboards/default">classroom</a></td><td class="dataCell"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/q/status:merged+project:classroom+branch:kindergarten">kindergarten</a></td><td class="dataCell cLastUpdate">May 20</td><td class="dataCell cSIZE" title="+3, -3"><div class="changeSize" style="width: 2px; background-color: rgb(5, 255, 0);"></div></td><td class="dataCell cAPPROVAL singleLine" title="Code-Review 
+by tanxinwen"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAh0lEQVR42mNgGDJgzu2Z/3uudvwnWWPUoVDSNb7/+e6/5Tbj/9XnysnTCLKVZKeCNGpuUPoPMoRkP3IsYfh/7u0Z/Bq99rig2AAKGJBGggEEMhmkEab43ue7YDbIyUQ5EWQASIPEKsH/IFcQ5VxsfgTh7BNppAXQ3ue74baDnE5WKiJLI6kAAN+fdJsknylQAAAAAElFTkSuQmCC" width="15" height="15" class="gwt-Image"></td></tr><tr><td class="iconCell leftMostCell"></td><td class="iconCell"><img src="data:image/gif;base64,R0lGODlhDwAPALMPAP///8zj++r7/7vb/rHW/tPt/9Lk+qzT/rbY/sHh/8Te/N7q+Nzy/7nY/djn+f///yH5BAEAAA8ALAAAAAAPAA8AAARg8MkZjpo4k0KyNwlQBB42MICAfEF7APDRBsYzIEkewGKeDI1DgUckMg6GTdFIqC0QgyUgQVhgGkOi4OBBCJYdzILAywIGNcoOgCAQvowBRpE4kgzCQgPjQCAcEwsNTRIRADs=" width="15" height="15" class="gwt-Image"></td><td class="dataCell cSUBJECT"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/24569">-: [fix] add kindergarten for kindergarten package.</a></td><td class="dataCell cSTATUS">Merged</td><td class="dataCell cOWNER"><div class="accountLinkPanel"><img class="gwt-Image" aria-hidden="true" style="display: none;"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/q/owner:tanxinwen+status:merged" title="tanxinwen">tanxinwen</a></div></td><td class="dataCell"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/projects/classroom,dashboards/default">classroom</a></td><td class="dataCell"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/q/status:merged+project:classroom+branch:kindergarten">kindergarten</a></td><td class="dataCell cLastUpdate">May 20</td><td class="dataCell cSIZE" title="+1, -0"><div class="changeSize" style="width: 2px; background-color: rgb(0, 255, 0);"></div></td><td class="dataCell cAPPROVAL singleLine" title="Code-Review 
+by tanxinwen"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAh0lEQVR42mNgGDJgzu2Z/3uudvwnWWPUoVDSNb7/+e6/5Tbj/9XnysnTCLKVZKeCNGpuUPoPMoRkP3IsYfh/7u0Z/Bq99rig2AAKGJBGggEEMhmkEab43ue7YDbIyUQ5EWQASIPEKsH/IFcQ5VxsfgTh7BNppAXQ3ue74baDnE5WKiJLI6kAAN+fdJsknylQAAAAAElFTkSuQmCC" width="15" height="15" class="gwt-Image"></td></tr><tr><td class="iconCell leftMostCell"></td><td class="iconCell"><img src="data:image/gif;base64,R0lGODlhDwAPALMPAP///8zj++r7/7vb/rHW/tPt/9Lk+qzT/rbY/sHh/8Te/N7q+Nzy/7nY/djn+f///yH5BAEAAA8ALAAAAAAPAA8AAARg8MkZjpo4k0KyNwlQBB42MICAfEF7APDRBsYzIEkewGKeDI1DgUckMg6GTdFIqC0QgyUgQVhgGkOi4OBBCJYdzILAywIGNcoOgCAQvowBRpE4kgzCQgPjQCAcEwsNTRIRADs=" width="15" height="15" class="gwt-Image"></td><td class="dataCell cSUBJECT"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/24565">-: [fix] fix wrong time.</a></td><td class="dataCell cSTATUS">Merged</td><td class="dataCell cOWNER"><div class="accountLinkPanel"><img class="gwt-Image" aria-hidden="true" style="display: none;"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/q/owner:tanxinwen+status:merged" title="tanxinwen">tanxinwen</a></div></td><td class="dataCell"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/projects/music_center,dashboards/default">music_center</a></td><td class="dataCell"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/q/status:merged+project:music_center+branch:master">master</a></td><td class="dataCell cLastUpdate">May 20</td><td class="dataCell cSIZE" title="+0, -0"><div class="changeSize" style="width: 2px; background-color: rgb(0, 255, 0);"></div></td><td class="dataCell cAPPROVAL singleLine" title="Code-Review 
+by tanxinwen"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAh0lEQVR42mNgGDJgzu2Z/3uudvwnWWPUoVDSNb7/+e6/5Tbj/9XnysnTCLKVZKeCNGpuUPoPMoRkP3IsYfh/7u0Z/Bq99rig2AAKGJBGggEEMhmkEab43ue7YDbIyUQ5EWQASIPEKsH/IFcQ5VxsfgTh7BNppAXQ3ue74baDnE5WKiJLI6kAAN+fdJsknylQAAAAAElFTkSuQmCC" width="15" height="15" class="gwt-Image"></td></tr><tr><td class="iconCell leftMostCell"></td><td class="iconCell"><img src="data:image/gif;base64,R0lGODlhDwAPALMPAP///8zj++r7/7vb/rHW/tPt/9Lk+qzT/rbY/sHh/8Te/N7q+Nzy/7nY/djn+f///yH5BAEAAA8ALAAAAAAPAA8AAARg8MkZjpo4k0KyNwlQBB42MICAfEF7APDRBsYzIEkewGKeDI1DgUckMg6GTdFIqC0QgyUgQVhgGkOi4OBBCJYdzILAywIGNcoOgCAQvowBRpE4kgzCQgPjQCAcEwsNTRIRADs=" width="15" height="15" class="gwt-Image"></td><td class="dataCell cSUBJECT"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/24560">MC-662: [fix] cancel download work when exit.</a></td><td class="dataCell cSTATUS">Merged</td><td class="dataCell cOWNER"><div class="accountLinkPanel"><img class="gwt-Image" aria-hidden="true" style="display: none;"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/q/owner:tanxinwen+status:merged" title="tanxinwen">tanxinwen</a></div></td><td class="dataCell"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/projects/music_center,dashboards/default">music_center</a></td><td class="dataCell"><a class="gwt-InlineHyperlink" href="http://codereview.xiaoyezi.com/#/q/status:merged+project:music_center+branch:master">master</a></td><td class="dataCell cLastUpdate">May 20</td><td class="dataCell cSIZE" title="+9, -1"><div class="changeSize" style="width: 2px; background-color: rgb(10, 255, 0);"></div></td><td class="dataCell cAPPROVAL singleLine" title="Code-Review 
+by tanxinwen"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAh0lEQVR42mNgGDJgzu2Z/3uudvwnWWPUoVDSNb7/+e6/5Tbj/9XnysnTCLKVZKeCNGpuUPoPMoRkP3IsYfh/7u0Z/Bq99rig2AAKGJBGggEEMhmkEab43ue7YDbIyUQ5EWQASIPEKsH/IFcQ5VxsfgTh7BNppAXQ3ue74baDnE5WKiJLI6kAAN+fdJsknylQAAAAAElFTkSuQmCC" width="15" height="15" class="gwt-Image"></td></tr></tbody></table></div></div></div></div></div><div style="clear: both"><div id="gerrit_footer"></div><div id="gerrit_btmmenu"><span class="gwt-InlineLabel">Press '?' to view keyboard shortcuts</span><span class="gwt-InlineLabel"> | </span><span class="gwt-InlineHTML">Powered by <a href="http://code.google.com/p/gerrit/" target="_blank">Gerrit Code Review</a> (2.9.3)</span><span class="gwt-InlineLabel"> | </span><a class="" href="http://code.google.com/p/gerrit/issues/list" target="_blank">Report Bug</a></div></div><iframe id="__gwt_historyFrame" src="javascript:&#39;&#39;" style="position:absolute;width:0;height:0;border:0" tabindex="-1" src="./My Reviews _ codereview.xiaoyezi Code Review_files/saved_resource.html"></iframe><script language="javascript" src="./My Reviews _ codereview.xiaoyezi Code Review_files/gerrit_ui.nocache.js.下载" type="text/javascript"></script><iframe src="javascript:&quot;&quot;" id="gerrit_ui" tabindex="-1" style="position: absolute; width: 0px; height: 0px; border: none; left: -1000px; top: -1000px;" src="./My Reviews _ codereview.xiaoyezi Code Review_files/saved_resource(1).html"></iframe><span class="rpcStatus" style="display: none;" aria-hidden="true">Working ...</span><div aria-hidden="true" style="display: none;"></div><iframe src="javascript:&#39;&#39;" name="_PrivateScope1" class="gwt-Frame" aria-hidden="true" style="display: none;" src="./My Reviews _ codereview.xiaoyezi Code Review_files/saved_resource(2).html"></iframe><div aria-hidden="true" style="display: none;"></div></body></html>
